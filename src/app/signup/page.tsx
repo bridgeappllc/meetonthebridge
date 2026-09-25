@@ -2,8 +2,8 @@
 
 import { useRouter } from "next/navigation";
 import { FormEvent, useState } from "react";
-import { Phone, TopBar } from "@/components/ui";
-import { useStore } from "@/lib/store";
+import { Phone, TopBar } from "../../components/ui";
+import { useStore } from "../../lib/store";
 
 export default function Signup() {
   const { signup } = useStore();
