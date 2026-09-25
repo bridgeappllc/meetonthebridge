@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+:root {
+  --bridge-blue: #2b6cff;
+  --bridge-navy: #0f1b33;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background: #eef3fb;
+  color: #0f1b33;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+.phone-shell {
+  max-width: 430px;
+  margin: 0 auto;
+  min-height: 100dvh;
+  background: #fff;
+  box-shadow: 0 0 0 1px rgba(15, 27, 51, 0.06), 0 20px 60px rgba(15, 27, 51, 0.08);
+}
+
+.btn-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  border-radius: 999px;
+  background: #2b6cff;
+  color: #fff;
+  font-weight: 600;
+  padding: 14px 18px;
+  border: none;
+}
+
+.btn-secondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-radius: 999px;
+  background: #fff;
+  color: #2b6cff;
+  font-weight: 600;
+  padding: 14px 18px;
+  border: 1.5px solid #2b6cff;
+}
+
+.field {
+  width: 100%;
+  border: 1.5px solid #d7deea;
+  border-radius: 14px;
+  padding: 12px 14px;
+  font-size: 15px;
+  outline: none;
+}
+
+.field:focus {
+  border-color: #2b6cff;
+  box-shadow: 0 0 0 4px rgba(43, 108, 255, 0.12);
+}
