@@ -5,17 +5,19 @@ import { useState } from "react";
 import { TopBar } from "@/components/ui";
 import { friendById, useStore } from "@/lib/store";
 
+type Msg = { from: "me" | "them"; text: string };
+
 export default function Talk() {
   const { id } = useParams<{ id: string }>();
   const { bridges, friends } = useStore();
   const bridge = bridges.find((b) => b.id === id);
   const friend = bridge ? friendById(bridge.friendId, friends) : undefined;
   const [text, setText] = useState("");
-  const [msgs, setMsgs] = useState(
+  const [msgs, setMsgs] = useState<Msg[]>(
     friend
       ? [
           {
-            from: "them" as const,
+            from: "them",
             text: `Thanks for inviting me. We already share ${bridge?.progress ?? 10} agreements. What should we look at first?`,
           },
         ]
